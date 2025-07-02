@@ -51,7 +51,7 @@ public class BenchmarkTest00021 extends HttpServlet {
             String base = "ou=users,ou=system";
             javax.naming.directory.SearchControls sc = new javax.naming.directory.SearchControls();
             sc.setSearchScope(javax.naming.directory.SearchControls.SUBTREE_SCOPE);
-            String filter = "(&(objectclass=person))(|(uid=" + param + ")(street={0}))";
+            String filter = "(&(objectclass=person))(|java.text.MessageFormat.format("(uid={0})", searchTerm)(street={0}))";
             Object[] filters = new Object[] {"The streetz 4 Ms bar"};
             // System.out.println("Filter " + filter);
             boolean found = false;
